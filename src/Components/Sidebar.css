@@ -1,0 +1,221 @@
+.sidebar__logo {
+  height: 1.5rem;
+  width: 1.5rem;
+  object-fit: contain;
+}
+
+.sidebar__avatar {
+  margin: 1rem;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+}
+
+.sidebar__detail {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar__contact {
+  margin-top: 1rem;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid rgba(213, 238, 238, 0.5);
+}
+
+.sidebar {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  min-width: fit-content;
+  min-height: fit-content;
+  overflow: scroll;
+  flex: 0.2;
+  border-radius: 16px;
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+}
+
+.sidebar__user {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(213, 238, 238, 0.4);
+}
+
+h2,
+h6 {
+  color: #2e1437;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.sidebar__location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1rem;
+}
+.sidebar__location > p {
+  font-size: small;
+  font-weight: 100;
+}
+
+.MuiSvgIcon-root {
+  color: #28466d;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.MuiButtonBase-root :hover {
+  transform: scale(1.1);
+  transition: 0.01s transform ease-in;
+}
+
+.sidebar__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.link__text {
+  margin: 1rem 0rem;
+  padding: 0.1rem 0.5rem;
+  color: #2e1437;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.link__text:hover {
+  color: #060b11;
+}
+.sidebar__links > div > a {
+  text-decoration: none;
+}
+
+.sidebar__links > div {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(213, 238, 238, 0.5);
+}
+.link__div:hover {
+  box-shadow: inset 0rem -0.4rem 0.2rem -0.1rem #7bc6cc;
+}
+.link__div:hover {
+  background-color: #2e1437;
+}
+.link__div:hover h3 {
+  color: white;
+}
+.download__resume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.download__icon:hover {
+  color: #060b11;
+}
+.sidebar__darkSwitch {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  margin-left: 50%;
+  margin-right: 50%;
+  transform: translate(-50%, 50%);
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.2fr;
+    grid-template-rows: 0.1fr;
+    grid-template-areas:
+      "avatar contact"
+      "links links";
+    flex: 0.5;
+    z-index: 100;
+    position: fixed;
+  }
+  .sidebar__user {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: avatar;
+  }
+
+  .sidebar__contact {
+    grid-area: contact;
+    display: flex;
+    justify-self: flex-start;
+    align-self: flex-start;
+    height: auto;
+  }
+  .sidebar__links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-area: links;
+  }
+  .link__div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.2rem;
+    height: 2.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-left: 0.2rem;
+    border-radius: 1rem;
+    border-right: 0.2rem solid rgba(56, 122, 165, 0.164);
+    border-left: 0.2rem solid rgba(174, 174, 185, 0.164);
+  }
+  .link__div:hover {
+    background-color: #2e1437;
+  }
+  .link__div:hover h3 {
+    color: white;
+  }
+
+  .sidebar__avatar {
+    height: 4rem;
+    width: 4rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+    font-weight: bolder;
+  }
+  h6 {
+    font-size: 0.8rem;
+    font-weight: 200;
+  }
+  .link__text {
+    font-size: 0.5rem;
+    font-weight: bold;
+  }
+  .sidebar__darkSwitch {
+    display: none;
+  }
+}
+/*  end of media query*/

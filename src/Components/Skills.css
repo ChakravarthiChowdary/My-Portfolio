@@ -1,0 +1,80 @@
+.skills__main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  flex: 0.8;
+}
+.skills {
+  width: 100%;
+  margin-top: 1rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  align-content: center;
+}
+
+.skills__Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  width: 90%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.skills__bar {
+  width: 100%;
+  height: 1.2rem;
+  display: inline-block;
+  border-radius: 16px;
+  background-color: grey;
+  overflow: hidden;
+  box-shadow: 0rem 0.1rem 0.1rem 0.1rem #282829a1;
+}
+
+.skills__detail {
+  height: 100%;
+  background-color: #6cdbeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fifty {
+  width: 50%;
+}
+.sixty {
+  width: 60%;
+}
+.seventy {
+  width: 70%;
+}
+.eighty {
+  width: 80%;
+}
+
+.skills__name {
+  z-index: 100;
+  color: #060b11;
+  font-size: 0.5rem;
+  margin-left: 0.5rem;
+  font-weight: bolder;
+}
+
+.skills__image {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: cover;
+  margin-right: 0.7rem;
+}
+.skills__image:hover {
+  transform: scale(0.8);
+  box-shadow: inset 0.2rem 0.2rem 0.8rem 0rem rgba(144, 229, 235, 0.904);
+}
+
+@media screen and (max-width: 768px) {
+  .skills__main {
+    flex: 0.2;
+    margin-top: 10rem;
+  }
+}

@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: inherit;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #426696;
+  /* background: #035461; */
+  border-radius: 15rem;
+  height: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(to right top, #948e99, #2e1437);
+  font-family: Poppins, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__darkSwitch {
+  display: none;
+}
+
+.app_content {
+  background: white;
+  min-height: 95vh;
+  max-height: 95vh;
+  width: 95vw;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+  z-index: 3;
+  backdrop-filter: blur(0.5rem);
+  display: flex;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.app__circle1 {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  position: absolute;
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.2)
+  );
+  top: 15%;
+  left: 15%;
+}
+.app__circle2 {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  position: absolute;
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.2)
+  );
+  bottom: 10%;
+  right: 10%;
+}
+
+.app__circle3 {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  position: absolute;
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.2)
+  );
+  top: 3%;
+  right: 3%;
+}
+
+.header {
+  font-size: 0.8rem;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  text-align: center;
+  background: inherit;
+  color: #2e1437;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0rem 0.1rem 0.7rem 0.1rem #1668d33d;
+}
+
+@media screen and (max-width: 768px) {
+  .app_content {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    font-size: 0.5rem;
+    max-height: 1.5rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .app__darkSwitch {
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #041c3b;
+    box-shadow: 0.1rem 0.1rem 0.2rem 0rem #829cbe;
+    z-index: 222;
+    position: fixed;
+    bottom: 4rem;
+    right: 2rem;
+    cursor: pointer;
+  }
+}
+
+.dark {
+  background: linear-gradient(
+    to right top,
+    rgb(36, 33, 33),
+    rgb(0, 0, 0)
+  ) !important;
+  color: #ffffff !important;
+}
+.on {
+  background-color: white !important;
+}
