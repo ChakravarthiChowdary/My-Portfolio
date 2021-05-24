@@ -24,8 +24,8 @@ const projects = [
   },
   {
     name: "College Mobile App",
-    imgURL1: "./projectScreens/CollegeApp1.PNG",
-    imgURL2: "./projectScreens/CollegeApp2.PNG",
+    imgURL1: "./projectScreens/CollegeApp1.png",
+    imgURL2: "./projectScreens/CollegeApp2.png",
     hostURL:
       "https://drive.google.com/file/d/1ZlGSzks7uWJq-YW3iBynDcEqwrT5hZxj/view",
     gitHubURL: "https://github.com/ChakravarthiChowdary/College-App",
